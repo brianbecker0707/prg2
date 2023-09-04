@@ -1,23 +1,32 @@
 #include "numeroComplexo.h"
 
-int main(){
-    int algLinear = 50 , algComplexo = 60, algMaisComplexo =0;
-    //algoritmos para demonstrar o escalamento de repetições
+int main() {
+    int algLinear = 50, algComplexo = 40, algMaisComplexo = 0;
+    // Algoritmo Linear demonstra O(n) que é o tempo constante
     for (int i = 0; i < 4; ++i) {
-        algLinear ++;
-        algComplexo ++;
-        algMaisComplexo ++;
-        for (int j = 0; j < 4; ++j) //for dentro de for para fazer uma exponencial, no caso n²
-        {
-            algComplexo ++;
-            algMaisComplexo ++;
-            for (int k = 0; k < 4; ++k) //for dentro de for dentro de for, gerando assim um n³
-            {
+        algLinear++;
+    }
+
+    // Algoritmo Complexo demonstra O(n²) que seria tempo ao quadrado
+    for (int i = 0; i < 4; ++i) {
+        algComplexo++;
+        for (int j = 0; j < 4; ++j) { // O(n)
+            algComplexo++;
+        }
+    }
+
+    // Algoritmo Mais Complexo faz um exemplo de O (n³) que seria tempo ao cubo
+    for (int i = 0; i < 4; ++i) {
+        algMaisComplexo++;
+        for (int j = 0; j < 4; ++j) { // O (n²)
+            algMaisComplexo++;
+            for (int k = 0; k < 4; ++k) { // O(n)
                 algMaisComplexo++;
             }
         }
     }
 
-    printf("%d, %d, %d", algLinear, algComplexo, algMaisComplexo); //O printf mostra que mesmo os números iniciais sendo bem maiores, o terceiro exemplo que seria n³, ainda ultrapassou os valores, demonstrando o quão relevante é.
+    printf("Algoritmo linear: %d\nAlgoritmo complexo: %d\nAlgoritmo mais complexo: %d", algLinear, algComplexo, algMaisComplexo);
+    //O printf exibe a demonstração dos algrismos sendo o linear apenas ele mesmo enquanto o complexo e mais complexo são notações de Big O
     return 0;
 }
