@@ -1,7 +1,7 @@
 #include "numeroComplexo.h"
 
 int main(){
-    int algLinear = 0 , algComplexo = 0, algMaisComplexo =0;
+    int algLinear = 50 , algComplexo = 60, algMaisComplexo =0;
     //algoritmos para demonstrar o escalamento de repetições
     for (int i = 0; i < 4; ++i) {
         algLinear ++;
@@ -18,6 +18,6 @@ int main(){
         }
     }
 
-    printf("%d, %d, %d", algLinear + 1, algComplexo + 1, algMaisComplexo + 1); // printf demonstra os valores de crescimento de maneira simples para visualização, o valor da variável linear poderia, nesse exemplo, iniciar com 79 a mais e ainda seria menor que o n³
+    printf("%d, %d, %d", algLinear, algComplexo, algMaisComplexo); //O printf mostra que mesmo os números iniciais sendo bem maiores, o terceiro exemplo que seria n³, ainda ultrapassou os valores, demonstrando o quão relevante é.
     return 0;
 }
