@@ -2,12 +2,12 @@
 
 int main() {
     int algLinear = 50, algComplexo = 40, algMaisComplexo = 0;
-    // Algoritmo Linear demonstra O(n) que é o tempo constante
+    // Algoritmo Linear demonstra O(n) que é o tempo constante.
     for (int i = 0; i < 4; ++i) {
         algLinear++;
     }
 
-    // Algoritmo Complexo demonstra O(n²) que seria tempo ao quadrado
+    // Algoritmo Complexo demonstra O(n²) que seria tempo ao quadrado.
     for (int i = 0; i < 4; ++i) {
         algComplexo++;
         for (int j = 0; j < 4; ++j) { // O(n)
@@ -15,7 +15,7 @@ int main() {
         }
     }
 
-    // Algoritmo Mais Complexo faz um exemplo de O (n³) que seria tempo ao cubo
+    // Algoritmo Mais Complexo faz um exemplo de O (n³) que seria tempo ao cubo.
     for (int i = 0; i < 4; ++i) {
         algMaisComplexo++;
         for (int j = 0; j < 4; ++j) { // O (n²)
